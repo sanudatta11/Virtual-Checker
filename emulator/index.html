@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Emulator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="container text-center">
+    <h1 class="text text-primary text-center"> <b>KONE ELEVATOR </b>  <br>
+    </h1>
+    <div class="row">
+        <div class="col-xs-6" id="elevatorstatus">
+            <div class="well well-lg">
+
+
+                <label for="">Elevator Status</label><br>
+                <input type="text" id="elevator_status" value="Halt!!" disabled><br>
+                <input type="hidden" id="fordelay" value="Halt!!" disabled><br>
+                <label for="">Door Status</label><br>
+                <input type="text" id="door_status" value="closed" disabled><br>
+                <label for="">Floor</label><br>
+                <input type="text" id="floor_input" value="0" disabled><br><br>
+                <br><br>
+
+            </div>
+        </div>
+        <div class="col-xs-6" id="controlpanel">
+
+            <div class="well well-lg">
+                <form>
+                    <div id="control_panel">
+                        <h3 class="text text-warning"> <b>Control Panel</b>  </h3> <br>
+                            <label for=""></label><button type="button"  class="btn btn-success floor_btn" id="f1">Floor 1</button>&nbsp&nbsp
+                            <button type="button" class="btn btn-success floor_btn" id="f2">Floor 2</button>&nbsp&nbsp
+                            <button type="button" class="btn btn-success floor_btn" id="f3">Floor 3</button>&nbsp&nbsp
+                            <button type="button" class="btn btn-success floor_btn" id="f4">Floor 4</button>&nbsp&nbsp
+                            <button type="button" class="btn btn-success floor_btn" id="f5">Floor 5</button>&nbsp&nbsp
+                        <button class="btn btn-success" id="gobtn">Go</button>
+                    </div>
+                </form>
+
+
+                <br><br><br>
+                <div id="person_panel">
+                    <!--Add people here-->
+                    <button type="button" class="person_press btn btn-warning" id="p1">Person1+</button>
+                    <button type="button" class="person_press btn btn-warning" id="p2">Person2+</button>
+                    <button type="button" class="person_press btn btn-warning" id="p3">Person3+</button>
+                    <button type="button" class="person_press btn btn-warning" id="p4">Person4+</button>
+                    <button type="button" class="person_press btn btn-warning" id="p5">Person5+</button>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="well well-lg">
+            <div class="row">
+                <div class="col-xs-6" id="authentication">
+                    <h4 class="text text-info">People in Lift Count</h4>
+                </div>
+                    <button type="button" class="btn btn-info" onclick="window.location.href=''" id="refresh"> <b>Refresh</b></button>
+
+
+
+                <div class="col-xs-6" id="formpeople">
+                    <form>
+                        <br>
+                        <h4 class="text text-info"> <b>People Count</b>  </h4>
+                        <form>
+                            <input type="text" name="pressure_point_count" id="people_count" value=""><br>
+                            <h4 class="text text-info"> <b>Pressure Count</b>  </h4>
+                            <input type="text" name="face_count" value="" id="pressure_count"><br>
+                            <br>
+                            <h4 class="text text-info"> <b>Authentication Count</b>  </h4>
+                            <input type="text" name="auth_count" value="" id="person_data"><br>
+                            <br>
+                            <input type="submit" class="btn btn-success" name="" value="Save">
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
